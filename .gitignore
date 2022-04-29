@@ -1,0 +1,10 @@
+### Folder ###
+/.gradle/
+/.settings/
+/bin/
+/build/
+
+### Files ###
+.DS_Store
+.classpath
+.project
