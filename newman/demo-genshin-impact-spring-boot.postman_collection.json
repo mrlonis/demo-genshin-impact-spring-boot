@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "b49373b0-9f23-4add-a8ea-1fcbb8b139ec",
-		"name": "demo-mythic-heroes-spring-boot",
+		"_postman_id": "39680cb9-8524-4656-a5db-59de2257cd82",
+		"name": "demo-genshin-impact-spring-boot",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -9,7 +9,7 @@
 			"name": "Spring Data Rest",
 			"item": [
 				{
-					"name": "mythicHeroes",
+					"name": "characters",
 					"item": [
 						{
 							"name": "findAll",
@@ -42,13 +42,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/mythicHero?page=0&size=0&sort=name,asc",
+									"raw": "{{hostname}}/api/characters?page=0&size=0",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"mythicHero"
+										"characters"
 									],
 									"query": [
 										{
@@ -58,20 +58,6 @@
 										{
 											"key": "size",
 											"value": "0"
-										},
-										{
-											"key": "sort",
-											"value": "name,desc",
-											"disabled": true
-										},
-										{
-											"key": "name",
-											"value": "Lucifer",
-											"disabled": true
-										},
-										{
-											"key": "sort",
-											"value": "name,asc"
 										}
 									]
 								}
@@ -84,32 +70,20 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/mythicHero/search/findBy?name=&factionName=&rarityName=&typeName=&page=0&size=100&sort=name,asc",
+									"raw": "{{hostname}}/api/characters/search/findBy?name=Kamisato Ayaka&page=0&size=100&sort=name,asc",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"mythicHero",
+										"characters",
 										"search",
 										"findBy"
 									],
 									"query": [
 										{
 											"key": "name",
-											"value": ""
-										},
-										{
-											"key": "factionName",
-											"value": ""
-										},
-										{
-											"key": "rarityName",
-											"value": ""
-										},
-										{
-											"key": "typeName",
-											"value": ""
+											"value": "Kamisato Ayaka"
 										},
 										{
 											"key": "page",
@@ -131,7 +105,7 @@
 					]
 				},
 				{
-					"name": "faction",
+					"name": "element",
 					"item": [
 						{
 							"name": "findAll",
@@ -139,13 +113,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/faction?page=0&size=50&sort=name",
+									"raw": "{{hostname}}/api/elements?page=0&size=50&sort=name",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"faction"
+										"elements"
 									],
 									"query": [
 										{
@@ -171,20 +145,20 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/faction/search/findByName?name=Luminarch",
+									"raw": "{{hostname}}/api/elements/search/findBy?name=Anemo",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"faction",
+										"elements",
 										"search",
-										"findByName"
+										"findBy"
 									],
 									"query": [
 										{
 											"key": "name",
-											"value": "Luminarch"
+											"value": "Anemo"
 										}
 									]
 								}
@@ -194,7 +168,7 @@
 					]
 				},
 				{
-					"name": "rarity",
+					"name": "weapon",
 					"item": [
 						{
 							"name": "findAll",
@@ -202,13 +176,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/rarity?page=0&size=50&sort=name",
+									"raw": "{{hostname}}/api/weapons?page=0&size=50&sort=name",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"rarity"
+										"weapons"
 									],
 									"query": [
 										{
@@ -234,20 +208,20 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/rarity/search/findByName?name=UR",
+									"raw": "{{hostname}}/api/weapons/search/findBy?name=Amenoma Kageuchi",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"rarity",
+										"weapons",
 										"search",
-										"findByName"
+										"findBy"
 									],
 									"query": [
 										{
 											"key": "name",
-											"value": "UR"
+											"value": "Amenoma Kageuchi"
 										}
 									]
 								}
@@ -257,7 +231,7 @@
 					]
 				},
 				{
-					"name": "type",
+					"name": "artifact set",
 					"item": [
 						{
 							"name": "findAll",
@@ -265,13 +239,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/type?page=0&size=50&sort=name",
+									"raw": "{{hostname}}/api/artifact-sets?page=0&size=50&sort=name",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"type"
+										"artifact-sets"
 									],
 									"query": [
 										{
@@ -297,21 +271,46 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hostname}}/api/type/search/findByName?name=Fighter",
+									"raw": "{{hostname}}/api/artifact-sets/search/findBy?name=Adventurer",
 									"host": [
 										"{{hostname}}"
 									],
 									"path": [
 										"api",
-										"type",
+										"artifact-sets",
 										"search",
-										"findByName"
+										"findBy"
 									],
 									"query": [
 										{
 											"key": "name",
-											"value": "Fighter"
+											"value": "Adventurer"
 										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "images",
+					"item": [
+						{
+							"name": "Get Image",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hostname}}/api/images/characters/Ayaka.png",
+									"host": [
+										"{{hostname}}"
+									],
+									"path": [
+										"api",
+										"images",
+										"characters",
+										"Ayaka.png"
 									]
 								}
 							},

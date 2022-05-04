@@ -30,9 +30,9 @@ VALUES
       'Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way' );
 
 INSERT INTO Genshin_Impact_Characters
-    ( name, imageUrl, elementId, weaponOneId, weaponTwoId, artifactSetOneId, artifactSetTwoId )
+    ( name, imageUrl, rarity, elementId, weaponOneId, weaponTwoId, artifactSetOneId, artifactSetTwoId )
 VALUES
-    ('Kamisato Ayaka', '',
+    ('Kamisato Ayaka', 'characters/Ayaka.png', 5,
       (SELECT id FROM Genshin_Impact_Elements WHERE name = 'Cryo'),
       (SELECT id FROM Genshin_Impact_Weapons WHERE name = 'Mistsplitter Reforged'),
       (SELECT id FROM Genshin_Impact_Weapons WHERE name = 'Amenoma Kageuchi'),

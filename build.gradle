@@ -95,7 +95,9 @@ check {
 
 bootRun {
     systemProperties = System.properties as Map<String, ?>
-    dependsOn restartDocker
+    dependsOn {
+        restartDocker
+    }
 }
 
 build {
@@ -117,6 +119,7 @@ repositories {
 
 dependencies {
     implementation 'com.zaxxer:HikariCP'
+    implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.flywaydb:flyway-core'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 import java.util.UUID;
 
-@RepositoryRestResource(collectionResourceRel = "data", itemResourceRel = "item", path = "element", exported = false)
+@RepositoryRestResource(collectionResourceRel = "data", itemResourceRel = "item", path = "elements")
 @CrossOrigin(origins = "http://localhost:4200")
 public interface ElementsRepository extends PagingAndSortingRepository<Element, UUID> {
     List<Element> findAll();

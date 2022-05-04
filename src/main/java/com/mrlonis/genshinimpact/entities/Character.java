@@ -34,6 +34,9 @@ public class Character implements ProjectEntity, Serializable {
     @Column(name = "imageUrl")
     private String imageUrl;
 
+    @Column(name = "rarity")
+    private int rarity;
+
     @Column(name = "elementId")
     private UUID elementId;
 
@@ -60,5 +63,13 @@ public class Character implements ProjectEntity, Serializable {
     @ManyToOne
     @JoinColumn(name = "weaponTwoId", referencedColumnName = "id", insertable = false, updatable = false, nullable = true)
     private Weapon weaponTwo;
+
+    @ManyToOne
+    @JoinColumn(name = "artifactSetOneId", referencedColumnName = "id", insertable = false, updatable = false, nullable = false)
+    private ArtifactSet artifactSetOne;
+
+    @ManyToOne
+    @JoinColumn(name = "artifactSetTwoId", referencedColumnName = "id", insertable = false, updatable = false, nullable = true)
+    private ArtifactSet artifactSetTwo;
 
 }
