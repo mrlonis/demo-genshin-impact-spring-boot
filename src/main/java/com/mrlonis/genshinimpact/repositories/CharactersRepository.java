@@ -18,7 +18,7 @@ public interface CharactersRepository extends PagingAndSortingRepository<Charact
     Page<Character> findAll(Pageable pageable);
 
     @RestResource(path = "findBy", rel = "findBy")
-    List<Character> findByNameIgnoreCaseContains(@Param("name") String name);
+    Page<Character> findByNameIgnoreCaseContains(@Param("name") String name, Pageable pageable);
 
 //    @RestResource(path = "findBy", rel = "findBy")
 //    Page<Character> findByNameIgnoreCaseContainsAndFaction_NameIgnoreCaseContainsAndRarity_NameIgnoreCaseContainsAndType_NameIgnoreCaseContains(

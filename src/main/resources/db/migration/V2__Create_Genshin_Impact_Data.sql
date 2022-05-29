@@ -1,13 +1,13 @@
 INSERT INTO Genshin_Impact_Elements
     ( name, imageUrl )
 VALUES
-    ( 'Pyro', '' ),
-    ( 'Hydro', '' ),
-    ( 'Anemo', '' ),
-    ( 'Electro', '' ),
-    ( 'Dendro', '' ),
-    ( 'Cryo', '' ),
-    ( 'Geo', '' );
+    ( 'Pyro', 'elements/Pyro.svg' ),
+    ( 'Hydro', 'elements/Hydro.svg' ),
+    ( 'Anemo', 'elements/Anemo.svg' ),
+    ( 'Electro', 'elements/Electro.svg' ),
+    ( 'Dendro', 'elements/Dendro.svg' ),
+    ( 'Cryo', 'elements/Cryo.svg' ),
+    ( 'Geo', 'elements/Geo.svg' );
 
 INSERT INTO Genshin_Impact_Weapons
     ( name, imageUrl, rarity, subStat, specialAbility, weaponType )
