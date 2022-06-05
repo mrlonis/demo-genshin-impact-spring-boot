@@ -5,7 +5,7 @@ plugins {
     id "org.springframework.boot" version "2.7.0"
     id "io.spring.dependency-management" version "1.0.11.RELEASE"
     id "io.freefair.lombok" version "6.4.3"
-    id "org.flywaydb.flyway" version "8.5.11"
+    id "org.flywaydb.flyway" version "8.5.12"
 }
 
 group = 'com.mrlonis'
@@ -30,7 +30,7 @@ task restartDocker {
         exec {
             //commandLine 'sh', './scripts/restartDocker.sh'
             workingDir = file('./')
-            commandLine = ['cmd', '/C', 'docker-compose up -d']
+            commandLine = ['cmd', '/C', 'docker compose up -d']
         }
     }
 }
@@ -118,15 +118,12 @@ repositories {
 }
 
 dependencies {
-//    implementation 'com.zaxxer:HikariCP'
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.flywaydb:flyway-core'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
-//    implementation 'org.springframework.boot:spring-boot-starter-integration'
     implementation "org.springframework.boot:spring-boot-starter-web"
-//    implementation 'org.springframework.integration:spring-integration-core'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
